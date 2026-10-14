@@ -14,8 +14,6 @@ A chat and moderation bot for [Wavez.fm](https://wavez.fm) rooms.
 
 ## Original project
 
-This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by [fluteds](https://github.com/fluteds), released under the ISC license. The fork's code is at [Sanazxd/wavez-bot](https://github.com/Sanazxd/wavez-bot). The [changelog](en/changelog.md) lists everything the fork adds, changes and removes.
-
-Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** od autora [fluteds](https://github.com/fluteds), vydaného pod licencí ISC. Kód forku je na [Sanazxd/wavez-bot](https://github.com/Sanazxd/wavez-bot). Co fork přidává, mění a odebírá, je v [seznamu změn](cs/changelog.md).
+This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by [fluteds](https://github.com/fluteds), released under the ISC license. The [changelog](en/changelog.md) lists everything the fork adds, changes and removes.
 
 These docs describe version **2.0.0**.

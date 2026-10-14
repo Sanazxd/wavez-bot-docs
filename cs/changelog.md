@@ -2,7 +2,7 @@
 
 🇬🇧 [English](../en/changelog.md) · [← Zpět](README.md)
 
-Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** od autora fluteds. Fork vychází z posledního commitu originálu, `f16e723` (26. 9. 2026, verze 1.1.0); vše níže přibylo až potom. Kód forku je na [Sanazxd/wavez-bot](https://github.com/Sanazxd/wavez-bot).
+Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** od autora fluteds. Fork vychází z posledního commitu originálu, `f16e723` (26. 9. 2026, verze 1.1.0); vše níže přibylo až potom.
 
 ## Porovnání s originálem
 

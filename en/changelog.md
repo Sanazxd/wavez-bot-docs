@@ -2,7 +2,7 @@
 
 🇨🇿 [Česky](../cs/changelog.md) · [← Back](README.md)
 
-This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by fluteds. The fork starts from the original's latest commit, `f16e723` (2026-09-26, version 1.1.0); everything below came after it. The fork's code is at [Sanazxd/wavez-bot](https://github.com/Sanazxd/wavez-bot).
+This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by fluteds. The fork starts from the original's latest commit, `f16e723` (2026-09-26, version 1.1.0); everything below came after it.
 
 ## Compared with the original
 
