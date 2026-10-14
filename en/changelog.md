@@ -1,0 +1,78 @@
+# Changelog
+
+🇨🇿 [Česky](../cs/changelog.md) · [← Back](README.md)
+
+This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by fluteds. The fork starts from the original's latest commit, `f16e723` (2026-09-26, version 1.1.0); everything below came after it. The fork's code is at [Sanazxd/wavez-bot](https://github.com/Sanazxd/wavez-bot).
+
+## Compared with the original
+
+| | Original 1.1.0 | This fork 2.0.0 |
+| --- | --- | --- |
+| Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
+| Commands | 40 | 43: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` |
+| `!help` | every command in one list | categories with counts; `!help <category>` and `!help <command>`; only what you can use; links to these docs |
+| Role ladder | `user < resident_dj < bouncer < manager < cohost < host` | adds `vip` between `user` and `resident_dj` |
+| Welcomes | one line, at most once per person every 10 minutes | separate random lines for host, staff, resident DJs and VIPs; every real arrival greeted; farewells |
+| Presence | believed every join and leave Wavez reported | tracks who is actually in the room: repeat joins, offline staff, closed tabs, reconnects |
+| AFK | flag cleared on the next message | welcome back with how long and who asked; replies to @-mentions; notices cleaned up afterwards |
+| Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
+| Chat cleanup | none | command messages deleted, bot messages deleted after an hour, `!clear` |
+| Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+
+## 2.0.0 — 2026-10-14
+
+### Added
+
+- **Ruleta raffle.** A bouncer opens a round with `!ruleta` and everyone gets an `@everyone` announcement. People enter with `!join` within a minute, and the bot draws a winner and moves them to #1 in the queue, adding them to it first if needed. The announcement says where the winner came from. If the draw lands on the DJ who is playing, it draws again.
+- **Czech.** Every line the bot says exists in English and Czech. Managers switch with `!en` / `!cz`, and the choice is saved. Czech lines about a person are worded gender-neutrally.
+- **Per-role welcomes.** The host, staff, resident DJs and VIPs each have their own list of greetings, picked at random and never the same twice in a row, with an hour before a special greeting repeats. Welcomes @-mention the person.
+- **Farewells.** The bot says goodbye when someone leaves and takes it down after an hour or when they come back. Only the latest welcome or farewell per person stays in chat.
+- **Presence tracking.** The bot greets only real arrivals and notices people who close the tab or drop out, including between two room lists. It checks who is in the room every 30 seconds.
+- **AFK overhaul.**
+  - The welcome back says how long you were away and who asked for you, and disappears after 15 seconds.
+  - @-mentioning someone who is AFK gets a reply with how long and why, once per person every 5 minutes.
+  - `!afk` alone ends AFK and `!afk <reason>` changes the reason.
+  - The away notice and the mention replies come down once the person is back.
+- **Auto-skip.** A track is skipped once mehs are at least half of all votes, never in its first 30 seconds.
+- **Emote train.** When 3 people post `:kong:` within 2 minutes, the bot joins in with 5–15 of them.
+- **Crowd celebration.** The bot says something when the room reaches 10 people.
+- **Chat cleanup.**
+  - Command messages are deleted after they are answered.
+  - The bot's own messages are deleted after an hour, and `!help` replies after a minute.
+  - `!clear` lets a bouncer delete the bot's messages.
+- **VIP role** on the ladder, with its own welcome and no moderation powers.
+- **`!help` by category**, with `!help <category>` (English or Czech name) and a link to this documentation.
+- **Bilingual documentation**: this site.
+
+### Changed
+
+- **One reply style** for every command: a leading emoji, sentence case, ` · ` between items, `Title — Artist` for tracks.
+- **`!score`** draws a bar (`▰▰▰▰▰▰▰▱▱▱ 72%`).
+- **`!mods`** groups staff by role.
+- **`!user`** shows a country flag.
+- **`!nowplaying`** shows time left as `2:41`.
+- **Long replies** are split between items rather than mid-sentence, and numbered `(1/3)`.
+
+### Removed
+
+- **`!vibe`** (`!mood`).
+- **The 10-minute limit on welcomes.** Each new welcome replaces the previous one instead, so reconnects no longer spam the chat.
+
+### Fixed
+
+- **Welcomes** go only to people actually arriving, not to repeat joins or offline staff, and someone reconnecting after closing the tab is welcomed again.
+- **Farewells** are said for people who drop out without leaving properly (closed tab, lost connection).
+- **AFK mentions** are detected from the message text, and the bot never tags itself in AFK notices.
+- **`!join` cannot be spammed**, and is ignored when no round is open.
+- **The ruleta winner** is moved to position 1 correctly (the queue position is one-based).
+- **The crowd celebration** fires when the room reaches exactly 10.
+
+## 1.1.0 and earlier
+
+See the [original repository](https://github.com/fluteds/wavez-bot/commits/main) for the history before the fork:
+
+- initial release: chat and moderation bot
+- `Accept-Language` so server errors are not in Portuguese
+- splitting replies over the message limit
+- @mention replies
+- unknown roles get no powers
