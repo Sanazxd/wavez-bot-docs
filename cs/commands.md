@@ -8,13 +8,15 @@ Alias funguje stejně jako název příkazu: `!np` je totéž co `!nowplaying`.
 
 **Kdo** udává nejnižší roli, která příkaz smí použít; viz [Role](roles.md). Příkazy bez role může použít kdokoli.
 
-**Prodleva** se počítá každému zvlášť. Moderátorské příkazy, vlastní odpovědi, nastavení, `!ping` a `!ruleta` čekají mezi použitími 5 sekund, `!clear` 10 sekund.
+**Prodleva** se počítá každému zvlášť. Moderátorské příkazy, vlastní odpovědi, nastavení, `!ping` a `!ruleta` čekají mezi použitími 5 sekund, `!clear` 10 sekund a všechny ostatní příkazy 3 sekundy.
+
+**Odpovědi** na příkazy se mažou po minutě; viz [Uklizený chat](features.md#uklizený-chat).
 
 ## Info
 
 | Příkaz | Aliasy | Co dělá |
 | --- | --- | --- |
-| `!help [kategorie\|příkaz]` | `commands` | Samotný vypíše kategorie, které můžeš používat, s počtem příkazů. `!help zábava` vypíše kategorii, `!help np` vysvětlí příkaz. Kategorie fungují i pod anglickými názvy (`!help fun`) |
+| `!help [kategorie\|příkaz]` | `commands` | Samotný vypíše kategorie, které můžeš používat, s počtem příkazů a odkazem na tuto dokumentaci. `!help zábava` vypíše kategorii, `!help np` vysvětlí příkaz. Kategorie fungují i pod anglickými názvy (`!help fun`) |
 | `!nowplaying` | `np`, `song` | Název, interpret a zbývající čas, např. `🎵 Blue Veins — Ash Walker · zbývá 2:41` |
 | `!time` | `elapsed`, `left` | Kolik ze skladby už uběhlo, jako `1:23 / 4:56` |
 | `!score` | `rating` | Podíl woots v procentech, ukazatel a hodnocení |
@@ -24,7 +26,7 @@ Alias funguje stejně jako název příkazu: `!np` je totéž co `!nowplaying`.
 | `!djs` | `lineup`, `booth` | Celá fronta popořadě, prvních osm |
 | `!queue` | `q`, `wait` | Délka fronty, jestli je zamčená, kdo hraje |
 | `!position [uživatel]` | `pos`, `waittime` | Místo ve frontě a odhad čekání; tvoje, pokud nikoho neuvedeš. Jména s mezerou dej do uvozovek: `!position "Slow Poke"` |
-| `!users` | `active`, `pop` | Kolik lidí je v místnosti a kdo je AFK |
+| `!users` | `active`, `pop` | Kolik lidí je v místnosti (bez bota) a kdo z nich je AFK |
 | `!user <jméno>` | `whois`, `profile` | Profil na Wavez: platformní titul, level, fanoušci, vlajka země |
 | `!mods` | `staff` | Štáb, kterého si bot nedávno všiml, podle rolí |
 | `!seen <uživatel>` | `lastseen` | Kdy někdo naposledy psal a co naposledy pustil |

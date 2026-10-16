@@ -6,18 +6,33 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## Compared with the original
 
-| | Original 1.1.0 | This fork 2.0.0 |
+| | Original 1.1.0 | This fork 2.0.1 |
 | --- | --- | --- |
 | Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
 | Commands | 40 | 43: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` |
 | `!help` | every command in one list | categories with counts; `!help <category>` and `!help <command>`; only what you can use; links to these docs |
 | Role ladder | `user < resident_dj < bouncer < manager < cohost < host` | adds `vip` between `user` and `resident_dj` |
+| Platform titles | `admin` counts as manager, `ambassador` as bouncer | only `admin` counts as manager; ambassadors are whatever the room made them |
 | Welcomes | one line, at most once per person every 10 minutes | separate random lines for host, staff, resident DJs and VIPs; every real arrival greeted; farewells |
-| Presence | believed every join and leave Wavez reported | tracks who is actually in the room: repeat joins, offline staff, closed tabs, reconnects |
+| Presence | believed every join and leave Wavez reported | tracks who is actually in the room: repeat joins, offline staff, closed tabs, reconnects, connection blips |
 | AFK | flag cleared on the next message | welcome back with how long and who asked; replies to @-mentions; notices cleaned up afterwards |
 | Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
-| Chat cleanup | none | command messages deleted, bot messages deleted after an hour, `!clear` |
+| Chat cleanup | none | command messages deleted, replies deleted after a minute and other bot messages after an hour, `!clear` |
 | Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+
+## 2.0.1 — 2026-10-16
+
+### Changed
+
+- **Replies to commands** are deleted after a minute instead of an hour, canned replies included. The `!afk` notice still stays until the person is back, and welcomes, farewells and ruleta announcements still stay an hour.
+- **Ambassadors no longer count as bouncers.** They are whatever role the room gave them. `admin` still counts as manager.
+
+### Fixed
+
+- **Connection blips** no longer cause a farewell and a new welcome. A farewell comes only on a real leave, a leave in Wavez's own log, or after a minute out of the room.
+- **Ambassadors who are plain users in the room** were greeted as staff and could run manager commands, because Wavez reports them as managers. The bot now goes by the role the room assigned.
+- **`!users`** counted the bot in the headcount and listed people as AFK after they had left. It now counts only people in the room and lists only their AFK.
+- **Leaving the room ends AFK**, quietly, with no welcome back on return. AFK left over from people who left while the bot was offline is cleared at startup.
 
 ## 2.0.0 — 2026-10-14
 

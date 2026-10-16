@@ -8,13 +8,15 @@ An alias works exactly like the command name: `!np` is `!nowplaying`.
 
 **Who** is the lowest role that can use the command; see [Roles](roles.md). Commands without a role are open to everyone.
 
-**Cooldowns** are per person. Moderation, custom and settings commands, `!ping` and `!ruleta` wait 5 seconds between uses, and `!clear` waits 10.
+**Cooldowns** are per person. Moderation, custom and settings commands, `!ping` and `!ruleta` wait 5 seconds between uses, `!clear` waits 10, and every other command 3.
+
+**Replies** to commands are deleted after a minute; see [A tidy chat](features.md#a-tidy-chat).
 
 ## Info
 
 | Command | Aliases | What it does |
 | --- | --- | --- |
-| `!help [category\|command]` | `commands` | With nothing after it, the categories you can use with a count each. `!help fun` lists a category, `!help np` explains a command. Categories also work by their Czech names (`!help zábava`) |
+| `!help [category\|command]` | `commands` | With nothing after it, the categories you can use with a count each, and a link to this documentation. `!help fun` lists a category, `!help np` explains a command. Categories also work by their Czech names (`!help zábava`) |
 | `!nowplaying` | `np`, `song` | Title, artist, and time left, e.g. `🎵 Blue Veins — Ash Walker · 2:41 left` |
 | `!time` | `elapsed`, `left` | How far into the track we are, as `1:23 / 4:56` |
 | `!score` | `rating` | Woots as a percentage, a bar and a verdict, e.g. `📊 ▰▰▰▰▰▰▰▱▱▱ 72% · 18/25 · going down well` |
@@ -24,7 +26,7 @@ An alias works exactly like the command name: `!np` is `!nowplaying`.
 | `!djs` | `lineup`, `booth` | The whole queue in order, first eight |
 | `!queue` | `q`, `wait` | Queue length, whether it is locked, who is playing |
 | `!position [user]` | `pos`, `waittime` | Queue spot and estimated wait; yours unless you name someone. Quote names with spaces: `!position "Slow Poke"` |
-| `!users` | `active`, `pop` | How many people are in the room, and who is AFK |
+| `!users` | `active`, `pop` | How many people are in the room (the bot not counted), and which of them are AFK |
 | `!user <name>` | `whois`, `profile` | Someone's Wavez profile: platform title, level, fans, country flag |
 | `!mods` | `staff` | Staff the bot has seen recently, grouped by role |
 | `!seen <user>` | `lastseen` | When someone last spoke and what they last played |

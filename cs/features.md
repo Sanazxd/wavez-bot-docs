@@ -17,7 +17,7 @@ Všichni ostatní dostanou obyčejný pozdrav.
 
 - Každý zvláštní pozdrav má několik řádků. Bot vybere jeden náhodně a nikdy nezopakuje ten, který použil naposledy.
 - Zvláštní pozdrav se opakuje až po hodině. Návrat do hodiny dostane obyčejný pozdrav.
-- Počítá se jen role v místnosti. Platformní admini a ambasadoři dostanou obyčejný pozdrav.
+- Počítá se jen role, kterou dané osobě dala místnost. Platformní titul jako admin nebo ambasador sám o sobě zvláštní pozdrav nepřinese.
 - Boty bot nevítá nikdy.
 - Pozdrav dostane každý skutečný příchod, i návrat po zavření karty nebo výpadku spojení.
 - Lidi, kteří v místnosti už jsou, bot nevítá. Wavez jim někdy pošle příchod znovu nebo vypíše štáb, který je offline.
@@ -28,7 +28,8 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 
 - Rozloučení zmizí po hodině, nebo hned, jakmile se dotyčná osoba vrátí.
 - V chatu zůstává jen poslední uvítání nebo rozloučení pro každého. Nové o někom smaže to předchozí, takže nestabilní připojení chat nezahltí.
-- Zavření karty žádný signál o odchodu nepošle. Bot si všimne chybějícího jména v seznamu místnosti a rozloučí se až tehdy. Kdo je v místnosti, kontroluje každých 30 sekund.
+- Zavření karty žádný signál o odchodu nepošle. Bot si všimne chybějícího jména v seznamu místnosti, nebo odchodu ve vlastním záznamu příchodů a odchodů na Wavez, a rozloučí se až tehdy. Obojí kontroluje každých 30 sekund.
+- Krátký výpadek spojení (karta na pozadí, přepnutí Wi-Fi) není odchod. Při výpadku kratším než minutu, který Wavez nezaznamená jako odchod, nepřijde rozloučení ani nové uvítání po návratu.
 
 ## AFK
 
@@ -38,7 +39,8 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 - **Návrat:** jakmile znovu napíšeš do chatu, AFK končí. Bot tě přivítá zpátky, napíše, jak dlouhá byla nepřítomnost a kdo se po tobě ptal. Ta zpráva zmizí po 15 sekundách.
 - **Příkazy během AFK:** samotné `!afk` AFK ukončí a `!afk <nový důvod>` změní důvod.
 - **Úklid:** po tvém návratu bot smaže oznámení o AFK i odpovědi na zmínky. Změna důvodu smaže staré oznámení hned.
-- **Přehled:** `!users` ukáže, kdo je AFK.
+- **Odchod:** odchod z místnosti AFK potichu ukončí, bez přivítání po návratu. Stejně tak, když bot při startu zjistí, že v místnosti nejsi.
+- **Přehled:** `!users` ukáže, kdo z přítomných je AFK.
 
 ## Ruleta
 
@@ -77,9 +79,10 @@ Znovu slaví až poté, co místnost klesne na 8 nebo méně a uplynou 3 hodiny.
 ## Uklizený chat
 
 - **Příkazy se mažou**, jakmile na ně bot odpoví. Týká se všeho, co začíná `!`, včetně překlepů a neznámých příkazů.
-- **Zprávy bota se mažou** po hodině. Odpovědi na `!help` zmizí po minutě, potvrzení `!clear` po 10 sekundách a přivítání po AFK po 15 sekundách.
+- **Odpovědi na příkazy se mažou** po minutě, včetně vlastních odpovědí. Potvrzení `!clear` zmizí po 10 sekundách. Oznámení `!afk` zůstane do tvého návratu, nejvýš hodinu.
+- **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách.
 - **`!clear`** umožní bouncerovi smazat vše, co má bot ještě v chatu.
-- **Dlouhé odpovědi** se dělí až na čtyři očíslované zprávy (`(1/3)`), protože Wavez odmítá zprávy delší než 300 znaků.
+- **Dlouhé odpovědi** se dělí až na čtyři očíslované zprávy (`(1/3)`), protože Wavez odmítá zprávy delší než 255 znaků.
 
 ## Hláška při startu
 

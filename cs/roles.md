@@ -39,16 +39,16 @@ Pokud Wavez u člověka nahlásí roli, kterou bot nezná (třeba po přejmenov�
 
 Wavez má i tituly platné pro celou platformu, jako `admin` a `ambassador`. Samy o sobě v místnosti nic neznamenají: ambasador bez role v místnosti je tu `user`.
 
-Bot počítá dva z nich jako role v místnosti:
+Bot počítá jeden z nich jako roli v místnosti:
 
 | Platformní titul | Platí jako |
 | --- | --- |
 | `admin` | manager |
-| `ambassador` | bouncer |
 
-- Platí vyšší z obou rolí, takže nikoho to nedegraduje: ambasador, který je zároveň host, zůstává hostem.
-- Titul i chrání: obyčejný bouncer nevyhodí ambasadora.
+- Platí vyšší z obou rolí, takže nikoho to nedegraduje: admin, který je zároveň host, zůstává hostem.
+- Titul i chrání: obyčejný bouncer nevyhodí admina.
+- Ambasadoři mají takovou roli, jakou jim dala místnost. Ambasador bez role v místnosti je `user`, přestože ho Wavez botovi hlásí jako managera.
 - Ostatní tituly, třeba `subscriber`, pro bota nic neznamenají.
-- Titul nemění uvítání. Ambasador dostane obyčejné uvítání, ne to pro štáb.
+- Titul nemění uvítání. Admini a ambasadoři dostanou uvítání podle své role v místnosti, bez ní tedy obyčejné.
 
 `!user <jméno>` ukáže tituly daného účtu.
