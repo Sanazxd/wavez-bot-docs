@@ -39,16 +39,16 @@ If Wavez reports a role for a person that the bot does not know (for example aft
 
 Wavez also has platform-wide titles such as `admin` and `ambassador`. On their own they mean nothing in a room: an ambassador with no room role is a `user` here.
 
-The bot counts two of them as room roles:
+The bot counts one of them as a room role:
 
 | Platform title | Counts as |
 | --- | --- |
 | `admin` | manager |
-| `ambassador` | bouncer |
 
-- Whichever role is higher wins, so nobody is demoted: an ambassador who is also the host stays host.
-- It protects as well as grants: a plain bouncer cannot kick an ambassador.
+- Whichever role is higher wins, so nobody is demoted: an admin who is also the host stays host.
+- It protects as well as grants: a plain bouncer cannot kick an admin.
+- Ambassadors are whatever role the room gave them. An ambassador with no room role is a `user`, even though Wavez reports them to the bot as a manager.
 - Other titles, such as `subscriber`, mean nothing to the bot.
-- Titles do not change the welcome. An ambassador gets the plain welcome, not the staff one.
+- Titles do not change the welcome. Admins and ambassadors get the welcome for their room role, so the plain one if they have none.
 
 `!user <name>` shows the titles an account holds.

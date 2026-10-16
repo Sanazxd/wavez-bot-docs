@@ -17,7 +17,7 @@ Everyone else gets the plain welcome.
 
 - Each special greeting has several lines. The bot picks one at random and never repeats the line it used last.
 - A special greeting waits an hour before it repeats. Someone who comes back within the hour gets the plain welcome.
-- Only the room role counts. Platform admins and ambassadors get the plain welcome.
+- Only the role the room gave someone counts. A platform title such as admin or ambassador does not earn a special greeting on its own.
 - Bots are never greeted.
 - Every real arrival is greeted, including someone coming back after closing the tab or losing their connection.
 - The bot does not greet people who were already in the room. Wavez sometimes repeats a join for them, or lists staff who are offline.
@@ -28,7 +28,8 @@ When someone leaves the room, including through a kick or ban, the bot says good
 
 - The farewell is deleted after an hour, or as soon as the person comes back.
 - Only the latest welcome or farewell for each person stays in chat. A new one about someone takes down the previous one about them, so a flaky connection does not fill the chat.
-- Someone who closes the tab sends no "left" signal. The bot notices them missing from the room list and says the farewell then. It checks who is in the room every 30 seconds.
+- Someone who closes the tab sends no "left" signal. The bot notices them missing from the room list, or Wavez's own log of joins and leaves shows them leaving, and says the farewell then. It checks both every 30 seconds.
+- A connection that only blips (a background tab, a Wi-Fi switch) is not a leave. Someone out of the room for less than a minute, and not logged by Wavez as leaving, gets no farewell, and no new welcome when they are back.
 
 ## AFK
 
@@ -38,7 +39,8 @@ When someone leaves the room, including through a kick or ban, the bot says good
 - **Coming back:** the next time you write in chat, you are back. The bot welcomes you back with how long you were gone and who asked for you. That message disappears after 15 seconds.
 - **Commands while away:** `!afk` alone ends your AFK, and `!afk <new reason>` changes the reason.
 - **Cleanup:** once you are back, the bot's away notice and its replies to mentions are deleted. A changed reason takes the old notice down straight away.
-- **Status:** `!users` shows who is AFK.
+- **Leaving:** leaving the room ends your AFK quietly, with no welcome back when you return. So does the bot finding you gone when it starts.
+- **Status:** `!users` shows who in the room is AFK.
 
 ## Ruleta
 
@@ -77,9 +79,10 @@ It does not celebrate again until the room has dropped to 8 or fewer and 3 hours
 ## A tidy chat
 
 - **Commands are deleted** once they have been answered. This covers anything starting with `!`, typos and unknown commands included.
-- **The bot's own messages are deleted** after an hour. `!help` replies go after 1 minute, `!clear` confirmations after 10 seconds, and the AFK welcome back after 15 seconds.
+- **Replies to commands are deleted** after 1 minute, canned replies included. `!clear` confirmations go after 10 seconds. The `!afk` notice stays until you are back, at most an hour.
+- **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds.
 - **`!clear`** lets a bouncer delete everything the bot still has in chat.
-- **Long replies** are split into up to four numbered messages (`(1/3)`), because Wavez rejects messages over 300 characters.
+- **Long replies** are split into up to four numbered messages (`(1/3)`), because Wavez rejects messages over 255 characters.
 
 ## Startup line
 

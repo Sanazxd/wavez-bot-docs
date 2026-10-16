@@ -6,18 +6,33 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## Porovnání s originálem
 
-| | Originál 1.1.0 | Tento fork 2.0.0 |
+| | Originál 1.1.0 | Tento fork 2.0.1 |
 | --- | --- | --- |
 | Jazyky | jen angličtina | čeština a angličtina, přepínané v chatu příkazy `!cz` / `!en` |
 | Příkazy | 40 | 43: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyl `!vibe` |
 | `!help` | všechny příkazy v jednom výpisu | kategorie s počty; `!help <kategorie>` a `!help <příkaz>`; jen to, co smíš použít; odkaz na tuto dokumentaci |
 | Žebříček rolí | `user < resident_dj < bouncer < manager < cohost < host` | přibyla role `vip` mezi `user` a `resident_dj` |
+| Platformní tituly | `admin` platí jako manager, `ambassador` jako bouncer | jako manager platí jen `admin`; ambasadoři mají roli, kterou jim dala místnost |
 | Uvítání | jeden řádek, nejvýš jednou za 10 minut na osobu | vlastní náhodné řádky pro hosta, štáb, resident DJs a VIP; každý skutečný příchod; rozloučení |
-| Přítomnost | věřil každému příchodu a odchodu, který Wavez nahlásil | sleduje, kdo je skutečně v místnosti: opakované příchody, štáb offline, zavřené karty, znovupřipojení |
+| Přítomnost | věřil každému příchodu a odchodu, který Wavez nahlásil | sleduje, kdo je skutečně v místnosti: opakované příchody, štáb offline, zavřené karty, znovupřipojení, krátké výpadky spojení |
 | AFK | příznak zmizel s další zprávou | přivítání po návratu s délkou nepřítomnosti a kdo se ptal; odpovědi na @zmínky; úklid oznámení |
 | Automatika v místnosti | žádná | automatické přeskočení, vláček emotů, oslava 10 lidí, ruleta |
-| Úklid chatu | žádný | mazání příkazů, mazání zpráv bota po hodině, `!clear` |
+| Úklid chatu | žádný | mazání příkazů, mazání odpovědí po minutě a ostatních zpráv bota po hodině, `!clear` |
 | Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, ukazatele a vlajky |
+
+## 2.0.1 — 16. 10. 2026
+
+### Změněno
+
+- **Odpovědi na příkazy** se mažou po minutě místo po hodině, včetně vlastních odpovědí. Oznámení `!afk` dál zůstává až do návratu a uvítání, rozloučení a oznámení rulety dál vydrží hodinu.
+- **Ambasadoři už neplatí jako bounceři.** Mají roli, kterou jim dala místnost. `admin` dál platí jako manager.
+
+### Opraveno
+
+- **Krátké výpadky spojení** už nezpůsobí rozloučení a nové uvítání. Rozloučení přijde jen při skutečném odchodu, při odchodu ve vlastním záznamu Wavez, nebo po minutě mimo místnost.
+- **Ambasadoři, kteří jsou v místnosti obyčejní uživatelé,** dostávali uvítání pro štáb a mohli používat příkazy managerů, protože je Wavez hlásí jako managery. Bot se teď řídí rolí, kterou přidělila místnost.
+- **`!users`** započítával i bota a jako AFK vypisoval i lidi, kteří už odešli. Teď počítá jen lidi v místnosti a vypisuje jen jejich AFK.
+- **Odchod z místnosti ukončí AFK**, potichu a bez přivítání po návratu. AFK lidí, kteří odešli, zatímco byl bot offline, se smaže při startu.
 
 ## 2.0.0 — 14. 10. 2026
 

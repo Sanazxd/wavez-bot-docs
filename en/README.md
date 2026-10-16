@@ -15,7 +15,9 @@ Type `!help` in chat. The bot lists the command categories you can use and how m
 
 You only see what your role lets you use, so regular users never see the moderation commands.
 
-Commands you type are deleted once the bot has answered, and the bot's own messages disappear after an hour, so the chat stays readable.
+Commands you type are deleted once the bot has answered, its replies disappear after a minute, and its other messages after an hour, so the chat stays readable.
+
+The bare `!help` also links to this documentation.
 
 ## Pages
 
