@@ -46,7 +46,7 @@ When someone leaves the room, including through a kick or ban, the bot says good
 
 A raffle whose winner jumps to the front of the queue.
 
-1. A **bouncer** types `!ruleta`. The bot announces the round to `@everyone` and opens a 1-minute window to join.
+1. A **manager** types `!ruleta`. The bot announces the round to `@everyone` and opens a 1-minute window to join.
 2. Anyone types `!join` to enter. Someone already in is reminded once; repeating `!join` after that does nothing, so it cannot be spammed. `!join` with no round open does nothing either.
 3. When the minute is up, the bot draws a winner at random and announces them.
 4. The winner is added to the queue if they are not in it, then moved to position 1. The announcement says where they came from, e.g. "moved from #5 to #1".
@@ -72,7 +72,7 @@ When 3 different people post the same emote (`:kong:` by default) within 2 minut
 
 ## Crowd celebration
 
-When a join brings the room to 10 people (bots not counted), the bot celebrates with a random line and tags whoever tipped it over.
+When a join brings the room to 10 people (bots not counted), the bot celebrates with a random line. The cheer is for the whole room, so it tags nobody.
 
 It does not celebrate again until the room has dropped to 8 or fewer and 3 hours have passed. It does not celebrate a room that is already at 10 when the bot starts.
 

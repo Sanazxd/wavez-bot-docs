@@ -47,7 +47,7 @@ Alias funguje stejně jako název příkazu: `!np` je totéž co `!nowplaying`.
 | `!coin` | `flip`, `coinflip` | Panna nebo orel |
 | `!choose a \| b \| c` | `pick`, `either` | Vybere jednu možnost. Odděluj je znakem `\|`, nebo čárkami, když `\|` chybí |
 | `!roll [max]` / `!roll [min] [max]` | `dice`, `random` | Náhodné číslo, výchozí rozsah 1–6 |
-| `!ruleta` | `raffle`, `wheel`, `spin` | Ruleta. Kolo otevírá **bouncer** příkazem `!ruleta`; viz [Ruleta](features.md#ruleta) |
+| `!ruleta` | `raffle`, `wheel`, `spin` | Ruleta. Kolo otevírá **manager** příkazem `!ruleta`; viz [Ruleta](features.md#ruleta) |
 | `!join` | | Vstup do otevřeného kola rulety |
 
 ## Fronta

@@ -6,7 +6,7 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## Compared with the original
 
-| | Original 1.1.0 | This fork 2.0.1 |
+| | Original 1.1.0 | This fork 2.0.2 |
 | --- | --- | --- |
 | Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
 | Commands | 40 | 43: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` |
@@ -19,6 +19,13 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 | Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
 | Chat cleanup | none | command messages deleted, replies deleted after a minute and other bot messages after an hour, `!clear` |
 | Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+
+## 2.0.2 — 2026-10-28
+
+### Changed
+
+- **Only managers open the ruleta.** A bare `!ruleta` now needs a manager, not a bouncer. Joining with `!join`, `!ruleta leave` and `!ruleta list` stay open to everyone.
+- **The crowd celebration tags nobody.** The cheer at 10 people is for the whole room, so it no longer @-mentions the person whose arrival tipped it.
 
 ## 2.0.1 — 2026-10-16
 

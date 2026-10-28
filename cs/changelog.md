@@ -6,7 +6,7 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## Porovnání s originálem
 
-| | Originál 1.1.0 | Tento fork 2.0.1 |
+| | Originál 1.1.0 | Tento fork 2.0.2 |
 | --- | --- | --- |
 | Jazyky | jen angličtina | čeština a angličtina, přepínané v chatu příkazy `!cz` / `!en` |
 | Příkazy | 40 | 43: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyl `!vibe` |
@@ -19,6 +19,13 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 | Automatika v místnosti | žádná | automatické přeskočení, vláček emotů, oslava 10 lidí, ruleta |
 | Úklid chatu | žádný | mazání příkazů, mazání odpovědí po minutě a ostatních zpráv bota po hodině, `!clear` |
 | Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, ukazatele a vlajky |
+
+## 2.0.2 — 28. 10. 2026
+
+### Změněno
+
+- **Ruletu otevírají jen manageři.** Samotné `!ruleta` teď vyžaduje managera, ne bouncera. Přidat se přes `!join`, `!ruleta leave` a `!ruleta list` může dál každý.
+- **Oslava plné místnosti nikoho neoznačuje.** Oslava při 10 lidech patří celé místnosti, takže už neoznačí toho, jehož příchod desítku dovršil.
 
 ## 2.0.1 — 16. 10. 2026
 

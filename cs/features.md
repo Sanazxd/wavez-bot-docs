@@ -46,7 +46,7 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 
 Losování, ve kterém se vítězná osoba posune na začátek fronty.
 
-1. **Bouncer** napíše `!ruleta`. Bot ohlásí kolo všem (`@everyone`) a otevře minutu na přihlášení.
+1. **Manager** napíše `!ruleta`. Bot ohlásí kolo všem (`@everyone`) a otevře minutu na přihlášení.
 2. Kdokoli se přidá příkazem `!join`. Kdo už je v ruletě, dostane jednou připomínku; další `!join` už nic neudělá, takže se nedá spamovat. `!join`, když žádné kolo neběží, také nic neudělá.
 3. Po minutě bot náhodně vylosuje vítěze a oznámí výsledek.
 4. Vítěz se přidá do fronty, pokud v ní není, a pak se posune na pozici 1. Oznámení řekne odkud, např. „Posun z #5 na #1“.
@@ -72,7 +72,7 @@ Když 3 různí lidé pošlou stejný emote (výchozí `:kong:`) do 2 minut po s
 
 ## Oslava plné místnosti
 
-Když se místnost příchodem někoho naplní na 10 lidí (boti se nepočítají), bot to oslaví náhodným řádkem a označí toho, kdo desítku dovršil.
+Když se místnost příchodem někoho naplní na 10 lidí (boti se nepočítají), bot to oslaví náhodným řádkem. Oslava patří celé místnosti, takže nikoho neoznačí.
 
 Znovu slaví až poté, co místnost klesne na 8 nebo méně a uplynou 3 hodiny. Místnost, ve které je 10 lidí už při startu bota, neoslavuje.
 

@@ -47,7 +47,7 @@ An alias works exactly like the command name: `!np` is `!nowplaying`.
 | `!coin` | `flip`, `coinflip` | Heads or tails |
 | `!choose a \| b \| c` | `pick`, `either` | Picks one option. Separate options with `\|`, or with commas if there is no `\|` |
 | `!roll [max]` / `!roll [min] [max]` | `dice`, `random` | A random number, 1–6 by default |
-| `!ruleta` | `raffle`, `wheel`, `spin` | The raffle. A **bouncer** types `!ruleta` to open a round; see [Ruleta](features.md#ruleta) |
+| `!ruleta` | `raffle`, `wheel`, `spin` | The raffle. A **manager** types `!ruleta` to open a round; see [Ruleta](features.md#ruleta) |
 | `!join` | | Enter an open ruleta round |
 
 ## Queue
