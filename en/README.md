@@ -11,7 +11,7 @@ It is a fork of [fluteds/wavez-bot](https://github.com/fluteds/wavez-bot), the o
 Type `!help` in chat. The bot lists the command categories you can use and how many commands each has. From there:
 
 - `!help fun` lists the commands in one category
-- `!help np` explains one command, with its usage and who can use it
+- `!help seen` explains one command, with its usage and who can use it
 
 You only see what your role lets you use, so regular users never see the moderation commands.
 

@@ -16,4 +16,4 @@ A chat and moderation bot for [Wavez.fm](https://wavez.fm) rooms.
 
 This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot)** by [fluteds](https://github.com/fluteds), released under the ISC license. The [changelog](en/changelog.md) lists everything the fork adds, changes and removes.
 
-These docs describe version **2.0.4**.
+These docs describe version **2.0.5**.

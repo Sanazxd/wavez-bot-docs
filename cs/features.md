@@ -80,7 +80,7 @@ Znovu slaví až poté, co místnost klesne na 8 nebo méně a uplynou 3 hodiny.
 ## Uklizený chat
 
 - **Příkazy se mažou**, jakmile na ně bot odpoví. Týká se všeho, co začíná `!`, včetně překlepů a neznámých příkazů.
-- **Odpovědi na příkazy se mažou** po minutě, včetně vlastních odpovědí. Potvrzení `!clear` zmizí po 10 sekundách. Oznámení `!afk` zůstane do tvého návratu, nejvýš hodinu.
+- **Odpovědi na příkazy se mažou** po minutě. Potvrzení `!clear` zmizí po 10 sekundách. Oznámení `!afk` zůstane do tvého návratu, nejvýš hodinu.
 - **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách a hláška při startu po minutě. Dávky vláčku emotů zůstávají.
 - **`!clear`** umožní bouncerovi smazat vše, co má bot ještě v chatu.
 - **Dlouhé odpovědi** se dělí až na čtyři očíslované zprávy (`(1/3)`), protože Wavez odmítá zprávy delší než 255 znaků.
@@ -93,14 +93,14 @@ Když se bot připojí a je připravený odpovídat, napíše krátký řádek, 
 
 Všechny odpovědi mají stejnou podobu, aby se v nich místnost rychle vyznala:
 
-- jeden emoji na začátku podle druhu odpovědi (`🎵` skladba, `🎧` fronta, `📊` hlasy, `⚠️` chyba nebo nápověda k použití)
+- jeden emoji na začátku podle druhu odpovědi (`🕘` naposledy viděn, `👤` profil, `🎧` fronta, `⚠️` chyba nebo nápověda k použití)
 - ` · ` mezi položkami, `, ` mezi jmény
 - `Název — Interpret` u skladby
 
 ```
-🎵 Blue Veins — Ash Walker · zbývá 2:41
-📊 ▰▰▰▰▰▰▰▱▱▱ 72% · 18/25 · líbí se
-🛡️ Host: Ann · Bouncer: Bo, Cy
+🕘 Ann: poslední zpráva před 5 min · poslední skladba Blue Veins — Ash Walker před 2 h
+👤 @ann · úroveň 12 · 40 fanoušků · 🇨🇿
+👥 Poslouchá: 14 · 💤 afk: Bo, Cy
 ```
 
 ## Co si bot pamatuje přes restart
@@ -110,9 +110,7 @@ Tohle si bot pamatuje i přes restart:
 - stav AFK
 - kdo naposledy psal a co naposledy pustil
 - nastavené `!escort`
-- posledních 20 skladeb
-- vlastní odpovědi
 - zvolený jazyk
 - účastníky rulety
 
-Hlasy se neukládají. `!score` a `!votes` jsou po restartu prázdné až do dalšího hlasu.
+Hlasy se neukládají, takže po restartu automatické přeskočení čeká na další hlas, než může skladbu posoudit.

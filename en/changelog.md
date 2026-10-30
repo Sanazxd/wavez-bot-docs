@@ -6,10 +6,10 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## Compared with the original
 
-| | Original 1.1.0 | This fork 2.0.4 |
+| | Original 1.1.0 | This fork 2.0.5 |
 | --- | --- | --- |
 | Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
-| Commands | 40 | 39: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe`, `!theme`, `!rules`, `!dupe` and `!top` |
+| Commands | 40 | 26: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe`, `!theme`, `!rules`, `!dupe`, `!top`, the custom replies (`!addcmd`, `!delcmd`) and the booth, queue, vote and history commands (`!nowplaying`, `!score`, `!queue`, …) |
 | `!help` | every command in one list | categories with counts; `!help <category>` and `!help <command>`; only what you can use; links to these docs |
 | Role ladder | `user < resident_dj < bouncer < manager < cohost < host` | adds `vip` between `user` and `resident_dj` |
 | Platform titles | `admin` counts as manager, `ambassador` as bouncer | only `admin` counts as manager; ambassadors are whatever the room made them |
@@ -18,7 +18,17 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 | AFK | flag cleared on the next message | welcome back with how long and who asked; replies to @-mentions; notices cleaned up afterwards |
 | Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
 | Chat cleanup | none | command messages deleted, replies deleted after a minute and other bot messages after an hour, `!clear` |
-| Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+| Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, flags |
+
+## 2.0.5 — 2026-10-30
+
+### Removed
+
+- **Custom replies:** `!addcmd` (`!addcommand`, `!learn`) and `!delcmd` (`!delcommand`, `!forget`), and the **Canned** category in `!help`. Replies taught earlier no longer answer.
+- **The booth and queue commands:** `!nowplaying` (`!np`, `!song`), `!time` (`!elapsed`, `!left`), `!dj`, `!next` (`!upnext`), `!djs` (`!lineup`, `!booth`), `!queue` (`!q`, `!wait`) and `!position` (`!pos`, `!waittime`).
+- **The vote commands:** `!score` (`!rating`) and `!votes` (`!woots`). Auto-skip still reads the votes.
+- **`!mods`** (`!staff`).
+- **`!history`** (`!last`, `!recent`). The bot no longer keeps a list of the last 20 tracks; `!seen` still knows what each person last played.
 
 ## 2.0.4 — 2026-10-30
 

@@ -18,7 +18,7 @@ Příkaz pro nějakou roli může použít tato role a všechny vyšší. „Bou
 | vip | vlastní uvítání; žádná další práva |
 | resident_dj | vlastní uvítání; žádná další práva |
 | bouncer | skip, kick, mute, unmute, remove, move, lock a unlock, `!clear` |
-| manager | ban, unban, `!addcmd`, `!delcmd`, `!en`, `!cz`, otevření kola rulety |
+| manager | ban, unban, `!en`, `!cz`, otevření kola rulety |
 | cohost, host | všechno výše |
 
 ## Kdo smí zasahovat proti komu

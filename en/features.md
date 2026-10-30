@@ -80,7 +80,7 @@ It does not celebrate again until the room has dropped to 8 or fewer and 3 hours
 ## A tidy chat
 
 - **Commands are deleted** once they have been answered. This covers anything starting with `!`, typos and unknown commands included.
-- **Replies to commands are deleted** after 1 minute, canned replies included. `!clear` confirmations go after 10 seconds. The `!afk` notice stays until you are back, at most an hour.
+- **Replies to commands are deleted** after 1 minute. `!clear` confirmations go after 10 seconds. The `!afk` notice stays until you are back, at most an hour.
 - **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds, and the startup line after a minute. Emote train bursts stay.
 - **`!clear`** lets a bouncer delete everything the bot still has in chat.
 - **Long replies** are split into up to four numbered messages (`(1/3)`), because Wavez rejects messages over 255 characters.
@@ -93,14 +93,14 @@ When the bot comes online and is ready to answer, it posts a short line, by defa
 
 Every reply follows the same layout so the room learns to scan it:
 
-- one emoji up front saying what kind of answer it is (`🎵` track, `🎧` queue, `📊` votes, `⚠️` a mistake or a usage hint)
+- one emoji up front saying what kind of answer it is (`🕘` last seen, `👤` profile, `🎧` queue, `⚠️` a mistake or a usage hint)
 - ` · ` between items, `, ` between names
 - `Title — Artist` for a track
 
 ```
-🎵 Blue Veins — Ash Walker · 2:41 left
-📊 ▰▰▰▰▰▰▰▱▱▱ 72% · 18/25 · going down well
-🛡️ Host: Ann · Bouncer: Bo, Cy
+🕘 Ann: spoke 5m ago · played Blue Veins — Ash Walker 2h ago
+👤 @ann · lvl 12 · 40 fans · 🇨🇿
+👥 14 listening · 💤 afk: Bo, Cy
 ```
 
 ## What is remembered across restarts
@@ -110,9 +110,7 @@ The bot remembers these through a restart:
 - AFK flags
 - who last spoke and what they last played
 - escort bookings
-- the last 20 tracks
-- canned replies
 - the chosen language
 - the ruleta pool
 
-Vote counts are not saved. `!score` and `!votes` are empty after a restart until the next vote.
+Vote counts are not saved, so after a restart auto-skip waits for the next vote before it can judge a track.

@@ -6,10 +6,10 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## Porovnání s originálem
 
-| | Originál 1.1.0 | Tento fork 2.0.4 |
+| | Originál 1.1.0 | Tento fork 2.0.5 |
 | --- | --- | --- |
 | Jazyky | jen angličtina | čeština a angličtina, přepínané v chatu příkazy `!cz` / `!en` |
-| Příkazy | 40 | 39: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyly `!vibe`, `!theme`, `!rules`, `!dupe` a `!top` |
+| Příkazy | 40 | 26: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyly `!vibe`, `!theme`, `!rules`, `!dupe`, `!top`, vlastní odpovědi (`!addcmd`, `!delcmd`) a příkazy o pultu, frontě, hlasech a historii (`!nowplaying`, `!score`, `!queue`, …) |
 | `!help` | všechny příkazy v jednom výpisu | kategorie s počty; `!help <kategorie>` a `!help <příkaz>`; jen to, co smíš použít; odkaz na tuto dokumentaci |
 | Žebříček rolí | `user < resident_dj < bouncer < manager < cohost < host` | přibyla role `vip` mezi `user` a `resident_dj` |
 | Platformní tituly | `admin` platí jako manager, `ambassador` jako bouncer | jako manager platí jen `admin`; ambasadoři mají roli, kterou jim dala místnost |
@@ -18,7 +18,17 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 | AFK | příznak zmizel s další zprávou | přivítání po návratu s délkou nepřítomnosti a kdo se ptal; odpovědi na @zmínky; úklid oznámení |
 | Automatika v místnosti | žádná | automatické přeskočení, vláček emotů, oslava 10 lidí, ruleta |
 | Úklid chatu | žádný | mazání příkazů, mazání odpovědí po minutě a ostatních zpráv bota po hodině, `!clear` |
-| Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, ukazatele a vlajky |
+| Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, vlajky |
+
+## 2.0.5 — 30. 10. 2026
+
+### Odebráno
+
+- **Vlastní odpovědi:** `!addcmd` (`!addcommand`, `!learn`) a `!delcmd` (`!delcommand`, `!forget`) a s nimi kategorie **Odpovědi** v `!help`. Dřív naučené odpovědi už nereagují.
+- **Příkazy o pultu a frontě:** `!nowplaying` (`!np`, `!song`), `!time` (`!elapsed`, `!left`), `!dj`, `!next` (`!upnext`), `!djs` (`!lineup`, `!booth`), `!queue` (`!q`, `!wait`) a `!position` (`!pos`, `!waittime`).
+- **Příkazy o hlasech:** `!score` (`!rating`) a `!votes` (`!woots`). Automatické přeskočení hlasy dál sleduje.
+- **`!mods`** (`!staff`).
+- **`!history`** (`!last`, `!recent`). Bot si už nevede seznam posledních 20 skladeb; `!seen` dál ví, co kdo naposledy pustil.
 
 ## 2.0.4 — 30. 10. 2026
 

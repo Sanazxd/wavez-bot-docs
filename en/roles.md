@@ -18,7 +18,7 @@ A command for a role is open to that role and everyone above it. "Bouncer" means
 | vip | its own welcome; no extra powers |
 | resident_dj | its own welcome; no extra powers |
 | bouncer | skip, kick, mute, unmute, remove, move, lock and unlock, `!clear` |
-| manager | ban, unban, `!addcmd`, `!delcmd`, `!en`, `!cz`, opening a ruleta round |
+| manager | ban, unban, `!en`, `!cz`, opening a ruleta round |
 | cohost, host | everything above |
 
 ## Who can act on whom

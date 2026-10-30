@@ -11,7 +11,7 @@ Jde o fork původního projektu [fluteds/wavez-bot](https://github.com/fluteds/w
 Napiš do chatu `!help`. Bot vypíše kategorie příkazů, které můžeš používat, a kolik příkazů v každé je. Odtud:
 
 - `!help zábava` vypíše příkazy jedné kategorie
-- `!help np` vysvětlí jeden příkaz: jak se používá a kdo ho smí použít
+- `!help seen` vysvětlí jeden příkaz: jak se používá a kdo ho smí použít
 
 Vidíš jen to, co ti dovoluje tvoje role, takže běžní uživatelé moderátorské příkazy neuvidí.
 
