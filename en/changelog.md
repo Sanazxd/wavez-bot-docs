@@ -22,6 +22,10 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## 2.0.5 — 2026-10-30
 
+### Changed
+
+- **Every command cools down for 3 seconds.** Moderation and settings commands, `!ping` and `!ruleta` used to wait 5 seconds and `!clear` 10.
+
 ### Removed
 
 - **Custom replies:** `!addcmd` (`!addcommand`, `!learn`) and `!delcmd` (`!delcommand`, `!forget`), and the **Canned** category in `!help`. Replies taught earlier no longer answer.
@@ -29,6 +33,10 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 - **The vote commands:** `!score` (`!rating`) and `!votes` (`!woots`). Auto-skip still reads the votes.
 - **`!mods`** (`!staff`).
 - **`!history`** (`!last`, `!recent`). The bot no longer keeps a list of the last 20 tracks; `!seen` still knows what each person last played.
+
+### Fixed
+
+- **The `!ruleta` announcement** tagged or replied to the manager who opened the round when the room's reply mode was set to mention or reply. It now goes to `@everyone` only.
 
 ## 2.0.4 — 2026-10-30
 

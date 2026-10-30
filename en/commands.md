@@ -8,7 +8,7 @@ An alias works exactly like the command name: `!whois` is `!user`.
 
 **Who** is the lowest role that can use the command; see [Roles](roles.md). Commands without a role are open to everyone.
 
-**Cooldowns** are per person. Moderation and settings commands, `!ping` and `!ruleta` wait 5 seconds between uses, `!clear` waits 10, and every other command 3.
+**Cooldowns** are per person: every command waits 3 seconds between uses. The same command from the same person again sooner is ignored, with no reply.
 
 **Replies** to commands are deleted after a minute; see [A tidy chat](features.md#a-tidy-chat).
 

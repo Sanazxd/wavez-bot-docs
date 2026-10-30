@@ -46,7 +46,7 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 
 Losování, ve kterém se vítězná osoba posune na začátek fronty.
 
-1. **Manager** napíše `!ruleta`. Bot ohlásí kolo všem (`@everyone`) a otevře minutu na přihlášení.
+1. **Manager** napíše `!ruleta`. Bot ohlásí kolo všem (`@everyone`), aniž by managera označil nebo mu odpověděl, a otevře minutu na přihlášení.
 2. Kdokoli se přidá příkazem `!join`. Kdo už je v ruletě, dostane jednou připomínku; další `!join` už nic neudělá, takže se nedá spamovat. `!join`, když žádné kolo neběží, také nic neudělá. Odejít nejde: přihláška platí až do losování.
 3. Po minutě bot náhodně vylosuje vítěze a oznámí výsledek.
 4. Vítěz se přidá do fronty, pokud v ní není, a pak se posune na pozici 1. Oznámení řekne odkud, např. „Posun z #5 na #1“.

@@ -46,7 +46,7 @@ When someone leaves the room, including through a kick or ban, the bot says good
 
 A raffle whose winner jumps to the front of the queue.
 
-1. A **manager** types `!ruleta`. The bot announces the round to `@everyone` and opens a 1-minute window to join.
+1. A **manager** types `!ruleta`. The bot announces the round to `@everyone`, without tagging or replying to the manager, and opens a 1-minute window to join.
 2. Anyone types `!join` to enter. Someone already in is reminded once; repeating `!join` after that does nothing, so it cannot be spammed. `!join` with no round open does nothing either. There is no leaving: an entry stays in until the draw.
 3. When the minute is up, the bot draws a winner at random and announces them.
 4. The winner is added to the queue if they are not in it, then moved to position 1. The announcement says where they came from, e.g. "moved from #5 to #1".

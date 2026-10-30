@@ -22,6 +22,10 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## 2.0.5 — 30. 10. 2026
 
+### Změněno
+
+- **Každý příkaz má prodlevu 3 sekundy.** Moderátorské příkazy, nastavení, `!ping` a `!ruleta` dřív čekaly 5 sekund a `!clear` 10.
+
 ### Odebráno
 
 - **Vlastní odpovědi:** `!addcmd` (`!addcommand`, `!learn`) a `!delcmd` (`!delcommand`, `!forget`) a s nimi kategorie **Odpovědi** v `!help`. Dřív naučené odpovědi už nereagují.
@@ -29,6 +33,10 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 - **Příkazy o hlasech:** `!score` (`!rating`) a `!votes` (`!woots`). Automatické přeskočení hlasy dál sleduje.
 - **`!mods`** (`!staff`).
 - **`!history`** (`!last`, `!recent`). Bot si už nevede seznam posledních 20 skladeb; `!seen` dál ví, co kdo naposledy pustil.
+
+### Opraveno
+
+- **Ohlášení `!ruleta`** označilo managera, který kolo otevřel, nebo mu odpovědělo, když měla místnost nastavený režim odpovědí se zmínkou nebo vláknem. Teď jde jen všem (`@everyone`).
 
 ## 2.0.4 — 30. 10. 2026
 

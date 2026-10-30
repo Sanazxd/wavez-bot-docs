@@ -8,7 +8,7 @@ Alias funguje stejně jako název příkazu: `!whois` je totéž co `!user`.
 
 **Kdo** udává nejnižší roli, která příkaz smí použít; viz [Role](roles.md). Příkazy bez role může použít kdokoli.
 
-**Prodleva** se počítá každému zvlášť. Moderátorské příkazy, nastavení, `!ping` a `!ruleta` čekají mezi použitími 5 sekund, `!clear` 10 sekund a všechny ostatní příkazy 3 sekundy.
+**Prodleva** se počítá každému zvlášť: každý příkaz čeká mezi použitími 3 sekundy. Stejný příkaz od stejné osoby dřív bot bez odpovědi ignoruje.
 
 **Odpovědi** na příkazy se mažou po minutě; viz [Uklizený chat](features.md#uklizený-chat).
 
