@@ -6,10 +6,10 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## Compared with the original
 
-| | Original 1.1.0 | This fork 2.0.2 |
+| | Original 1.1.0 | This fork 2.0.3 |
 | --- | --- | --- |
 | Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
-| Commands | 40 | 43: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` |
+| Commands | 40 | 42: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` and `!theme`; `!rules` links to these docs |
 | `!help` | every command in one list | categories with counts; `!help <category>` and `!help <command>`; only what you can use; links to these docs |
 | Role ladder | `user < resident_dj < bouncer < manager < cohost < host` | adds `vip` between `user` and `resident_dj` |
 | Platform titles | `admin` counts as manager, `ambassador` as bouncer | only `admin` counts as manager; ambassadors are whatever the room made them |
@@ -19,6 +19,19 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 | Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
 | Chat cleanup | none | command messages deleted, replies deleted after a minute and other bot messages after an hour, `!clear` |
 | Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+
+## 2.0.3 — 2026-10-30
+
+### Changed
+
+- **`!rules` links to this documentation** instead of printing rules from the bot's settings. It says the rules and documentation are on GitHub, with the link.
+- **AFK notices start with `:brb:`** instead of 💤: the away notice and the replies to @-mentions.
+- **The startup line is deleted after a minute** instead of an hour.
+
+### Removed
+
+- **`!theme`** (`!genre`).
+- **`!ruleta leave` and `!ruleta list`**, and `!ruleta join` with them. `!join` is the only way into a round, and an entry stays in until the draw.
 
 ## 2.0.2 — 2026-10-28
 

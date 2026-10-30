@@ -33,8 +33,7 @@ An alias works exactly like the command name: `!np` is `!nowplaying`.
 | `!history [count]` | `last`, `recent` | The last few finished tracks, newest first, up to five |
 | `!dupe` | `again`, `heardit` | Whether the current track was among the last 20, and who played it |
 | `!top` | `best` | The best received of the last 20 tracks (woots minus mehs) |
-| `!rules` | `etiquette` | The room rules |
-| `!theme` | `genre` | Tonight's theme, if there is one |
+| `!rules` | `etiquette` | Where to find the room rules: a link to this documentation |
 | `!afk [reason]` | `away`, `brb` | Mark yourself away. See [AFK](features.md#afk) |
 | `!uptime` | | How long the bot has been running |
 | `!ping` | `pong` | Checks the bot is alive |

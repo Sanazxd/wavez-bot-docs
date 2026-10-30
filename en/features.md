@@ -33,7 +33,7 @@ When someone leaves the room, including through a kick or ban, the bot says good
 
 ## AFK
 
-`!afk` marks you away, and `!afk <reason>` adds a reason (up to 80 characters).
+`!afk` marks you away, and `!afk <reason>` adds a reason (up to 80 characters). The bot posts an away notice starting with `:brb:`.
 
 - **Mentions while you are away:** anyone who @-mentions you is told how long you have been away and why. Each person hears this at most once every 5 minutes.
 - **Coming back:** the next time you write in chat, you are back. The bot welcomes you back with how long you were gone and who asked for you. That message disappears after 15 seconds.
@@ -47,7 +47,7 @@ When someone leaves the room, including through a kick or ban, the bot says good
 A raffle whose winner jumps to the front of the queue.
 
 1. A **manager** types `!ruleta`. The bot announces the round to `@everyone` and opens a 1-minute window to join.
-2. Anyone types `!join` to enter. Someone already in is reminded once; repeating `!join` after that does nothing, so it cannot be spammed. `!join` with no round open does nothing either.
+2. Anyone types `!join` to enter. Someone already in is reminded once; repeating `!join` after that does nothing, so it cannot be spammed. `!join` with no round open does nothing either. There is no leaving: an entry stays in until the draw.
 3. When the minute is up, the bot draws a winner at random and announces them.
 4. The winner is added to the queue if they are not in it, then moved to position 1. The announcement says where they came from, e.g. "moved from #5 to #1".
 
@@ -80,13 +80,13 @@ It does not celebrate again until the room has dropped to 8 or fewer and 3 hours
 
 - **Commands are deleted** once they have been answered. This covers anything starting with `!`, typos and unknown commands included.
 - **Replies to commands are deleted** after 1 minute, canned replies included. `!clear` confirmations go after 10 seconds. The `!afk` notice stays until you are back, at most an hour.
-- **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds.
+- **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds, and the startup line after a minute.
 - **`!clear`** lets a bouncer delete everything the bot still has in chat.
 - **Long replies** are split into up to four numbered messages (`(1/3)`), because Wavez rejects messages over 255 characters.
 
 ## Startup line
 
-When the bot comes online and is ready to answer, it posts a short line, by default pointing at `!help`.
+When the bot comes online and is ready to answer, it posts a short line, by default pointing at `!help`. The line is deleted after a minute.
 
 ## Reply style
 

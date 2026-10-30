@@ -33,7 +33,7 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 
 ## AFK
 
-`!afk` ti nastaví stav AFK a `!afk <důvod>` přidá důvod (nejvýš 80 znaků).
+`!afk` ti nastaví stav AFK a `!afk <důvod>` přidá důvod (nejvýš 80 znaků). Bot napíše oznámení začínající `:brb:`.
 
 - **Zmínky během AFK:** kdo tě zmíní přes @, dozví se, jak dlouho jsi pryč a proč. Každý tuhle odpověď dostane nejvýš jednou za 5 minut.
 - **Návrat:** jakmile znovu napíšeš do chatu, AFK končí. Bot tě přivítá zpátky, napíše, jak dlouhá byla nepřítomnost a kdo se po tobě ptal. Ta zpráva zmizí po 15 sekundách.
@@ -47,7 +47,7 @@ Když někdo z místnosti odejde, i kvůli kicku nebo banu, bot se rozloučí.
 Losování, ve kterém se vítězná osoba posune na začátek fronty.
 
 1. **Manager** napíše `!ruleta`. Bot ohlásí kolo všem (`@everyone`) a otevře minutu na přihlášení.
-2. Kdokoli se přidá příkazem `!join`. Kdo už je v ruletě, dostane jednou připomínku; další `!join` už nic neudělá, takže se nedá spamovat. `!join`, když žádné kolo neběží, také nic neudělá.
+2. Kdokoli se přidá příkazem `!join`. Kdo už je v ruletě, dostane jednou připomínku; další `!join` už nic neudělá, takže se nedá spamovat. `!join`, když žádné kolo neběží, také nic neudělá. Odejít nejde: přihláška platí až do losování.
 3. Po minutě bot náhodně vylosuje vítěze a oznámí výsledek.
 4. Vítěz se přidá do fronty, pokud v ní není, a pak se posune na pozici 1. Oznámení řekne odkud, např. „Posun z #5 na #1“.
 
@@ -80,13 +80,13 @@ Znovu slaví až poté, co místnost klesne na 8 nebo méně a uplynou 3 hodiny.
 
 - **Příkazy se mažou**, jakmile na ně bot odpoví. Týká se všeho, co začíná `!`, včetně překlepů a neznámých příkazů.
 - **Odpovědi na příkazy se mažou** po minutě, včetně vlastních odpovědí. Potvrzení `!clear` zmizí po 10 sekundách. Oznámení `!afk` zůstane do tvého návratu, nejvýš hodinu.
-- **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách.
+- **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách a hláška při startu po minutě.
 - **`!clear`** umožní bouncerovi smazat vše, co má bot ještě v chatu.
 - **Dlouhé odpovědi** se dělí až na čtyři očíslované zprávy (`(1/3)`), protože Wavez odmítá zprávy delší než 255 znaků.
 
 ## Hláška při startu
 
-Když se bot připojí a je připravený odpovídat, napíše krátký řádek, ve výchozím stavu s odkazem na `!help`.
+Když se bot připojí a je připravený odpovídat, napíše krátký řádek, ve výchozím stavu s odkazem na `!help`. Ten se po minutě smaže.
 
 ## Styl odpovědí
 

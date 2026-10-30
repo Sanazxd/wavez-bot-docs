@@ -33,8 +33,7 @@ Alias funguje stejně jako název příkazu: `!np` je totéž co `!nowplaying`.
 | `!history [počet]` | `last`, `recent` | Posledních pár dohraných skladeb, nejnovější první, nejvýš pět |
 | `!dupe` | `again`, `heardit` | Jestli aktuální skladba hrála mezi posledními 20 a kdo ji pustil |
 | `!top` | `best` | Nejlépe přijatá skladba z posledních 20 (woots minus mehs) |
-| `!rules` | `etiquette` | Pravidla místnosti |
-| `!theme` | `genre` | Dnešní téma, pokud nějaké je |
+| `!rules` | `etiquette` | Kde najít pravidla místnosti: odkaz na tuto dokumentaci |
 | `!afk [důvod]` | `away`, `brb` | Nastaví ti AFK. Viz [AFK](features.md#afk) |
 | `!uptime` | | Jak dlouho bot běží |
 | `!ping` | `pong` | Ověří, že bot žije |

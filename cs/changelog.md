@@ -6,10 +6,10 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## Porovnání s originálem
 
-| | Originál 1.1.0 | Tento fork 2.0.2 |
+| | Originál 1.1.0 | Tento fork 2.0.3 |
 | --- | --- | --- |
 | Jazyky | jen angličtina | čeština a angličtina, přepínané v chatu příkazy `!cz` / `!en` |
-| Příkazy | 40 | 43: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyl `!vibe` |
+| Příkazy | 40 | 42: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyly `!vibe` a `!theme`; `!rules` odkazuje na tuto dokumentaci |
 | `!help` | všechny příkazy v jednom výpisu | kategorie s počty; `!help <kategorie>` a `!help <příkaz>`; jen to, co smíš použít; odkaz na tuto dokumentaci |
 | Žebříček rolí | `user < resident_dj < bouncer < manager < cohost < host` | přibyla role `vip` mezi `user` a `resident_dj` |
 | Platformní tituly | `admin` platí jako manager, `ambassador` jako bouncer | jako manager platí jen `admin`; ambasadoři mají roli, kterou jim dala místnost |
@@ -19,6 +19,19 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 | Automatika v místnosti | žádná | automatické přeskočení, vláček emotů, oslava 10 lidí, ruleta |
 | Úklid chatu | žádný | mazání příkazů, mazání odpovědí po minutě a ostatních zpráv bota po hodině, `!clear` |
 | Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, ukazatele a vlajky |
+
+## 2.0.3 — 30. 10. 2026
+
+### Změněno
+
+- **`!rules` odkazuje na tuto dokumentaci** místo vypisování pravidel z nastavení bota. Napíše, že pravidla a dokumentace jsou na GitHubu, a přidá odkaz.
+- **Oznámení o AFK začínají `:brb:`** místo 💤: oznámení o odchodu i odpovědi na @zmínky.
+- **Hláška při startu se maže po minutě** místo po hodině.
+
+### Odebráno
+
+- **`!theme`** (`!genre`).
+- **`!ruleta leave` a `!ruleta list`**, a s nimi i `!ruleta join`. Do kola se dá vstoupit jen přes `!join` a přihláška platí až do losování.
 
 ## 2.0.2 — 28. 10. 2026
 
