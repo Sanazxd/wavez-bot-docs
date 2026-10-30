@@ -17,7 +17,7 @@ Vidíš jen to, co ti dovoluje tvoje role, takže běžní uživatelé moderáto
 
 Napsané příkazy bot po odpovědi smaže, jeho odpovědi zmizí po minutě a ostatní zprávy po hodině, takže chat zůstává přehledný.
 
-Samotné `!help` a `!rules` navíc odkazují na tuto dokumentaci.
+Samotné `!help` navíc odkazuje na tuto dokumentaci.
 
 ## Stránky
 

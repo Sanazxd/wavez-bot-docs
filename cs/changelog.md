@@ -6,10 +6,10 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 
 ## Porovnání s originálem
 
-| | Originál 1.1.0 | Tento fork 2.0.3 |
+| | Originál 1.1.0 | Tento fork 2.0.4 |
 | --- | --- | --- |
 | Jazyky | jen angličtina | čeština a angličtina, přepínané v chatu příkazy `!cz` / `!en` |
-| Příkazy | 40 | 42: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyly `!vibe` a `!theme`; `!rules` odkazuje na tuto dokumentaci |
+| Příkazy | 40 | 39: přibyly `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; ubyly `!vibe`, `!theme`, `!rules`, `!dupe` a `!top` |
 | `!help` | všechny příkazy v jednom výpisu | kategorie s počty; `!help <kategorie>` a `!help <příkaz>`; jen to, co smíš použít; odkaz na tuto dokumentaci |
 | Žebříček rolí | `user < resident_dj < bouncer < manager < cohost < host` | přibyla role `vip` mezi `user` a `resident_dj` |
 | Platformní tituly | `admin` platí jako manager, `ambassador` jako bouncer | jako manager platí jen `admin`; ambasadoři mají roli, kterou jim dala místnost |
@@ -19,6 +19,23 @@ Tento bot je fork projektu **[fluteds/wavez-bot](https://github.com/fluteds/wave
 | Automatika v místnosti | žádná | automatické přeskočení, vláček emotů, oslava 10 lidí, ruleta |
 | Úklid chatu | žádný | mazání příkazů, mazání odpovědí po minutě a ostatních zpráv bota po hodině, `!clear` |
 | Styl odpovědí | prostý text malými písmeny | jednotný styl: emoji na začátku, ` · ` mezi položkami, ukazatele a vlajky |
+
+## 2.0.4 — 30. 10. 2026
+
+### Změněno
+
+- **`!ping` ukazuje odezvu** serveru v milisekundách (`🏓 Pong · 42 ms`), případně napíše, že server neodpovídá.
+- **Dávky vláčku emotů zůstávají v chatu** místo smazání po hodině.
+
+### Odebráno
+
+- **`!rules`** (`!etiquette`). Samotné `!help` dál odkazuje na tuto dokumentaci.
+- **`!dupe`** (`!again`, `!heardit`).
+- **`!top`** (`!best`).
+
+### Opraveno
+
+- **`!move`** posouval lidi o místo níž, než se zadalo, a `!move <uživatel> 1` nedělal nic. Teď přesune na zadané místo, ohlásí, když dotyčný ve frontě není, a přesun potvrdí, až ho server provede.
 
 ## 2.0.3 — 30. 10. 2026
 

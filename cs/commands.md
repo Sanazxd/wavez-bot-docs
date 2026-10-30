@@ -31,12 +31,9 @@ Alias funguje stejně jako název příkazu: `!np` je totéž co `!nowplaying`.
 | `!mods` | `staff` | Štáb, kterého si bot nedávno všiml, podle rolí |
 | `!seen <uživatel>` | `lastseen` | Kdy někdo naposledy psal a co naposledy pustil |
 | `!history [počet]` | `last`, `recent` | Posledních pár dohraných skladeb, nejnovější první, nejvýš pět |
-| `!dupe` | `again`, `heardit` | Jestli aktuální skladba hrála mezi posledními 20 a kdo ji pustil |
-| `!top` | `best` | Nejlépe přijatá skladba z posledních 20 (woots minus mehs) |
-| `!rules` | `etiquette` | Kde najít pravidla místnosti: odkaz na tuto dokumentaci |
 | `!afk [důvod]` | `away`, `brb` | Nastaví ti AFK. Viz [AFK](features.md#afk) |
 | `!uptime` | | Jak dlouho bot běží |
-| `!ping` | `pong` | Ověří, že bot žije |
+| `!ping` | `pong` | Ověří, že bot žije, a ukáže odezvu serveru v ms |
 
 ## Zábava
 
@@ -71,7 +68,7 @@ Nikdo nemůže zasahovat proti botovi, proti někomu se stejnou rolí ani proti 
 | `!mute <uživatel> [doba] [důvod]` | | bouncer | Ztlumí někoho, volitelně na `30m`, `2h` nebo `1d` |
 | `!unmute <uživatel> [důvod]` | | bouncer | Zruší ztlumení |
 | `!remove <uživatel> [důvod]` | `rm` | bouncer | Odebere někoho z fronty |
-| `!move <uživatel> <pozice> [důvod]` | `mv` | bouncer | Přesune někoho na pozici ve frontě (1 je první) |
+| `!move <uživatel> <pozice> [důvod]` | `mv` | bouncer | Přesune někoho ve frontě na pozici (1 je první; pozice za koncem znamená poslední místo). Ohlásí to, až to server provede |
 | `!lock [důvod]` / `!unlock [důvod]` | | bouncer | Zamkne nebo odemkne frontu |
 | `!clear` | | bouncer | Smaže zprávy bota, které jsou ještě v chatu (z posledních 100) |
 | `!ban <uživatel> [doba] [důvod]` | | manager | Zabanuje někoho, volitelně na `30m`, `2h` nebo `1d` |

@@ -68,6 +68,7 @@ Když 3 různí lidé pošlou stejný emote (výchozí `:kong:`) do 2 minut po s
 
 - Pak počítá znovu od nuly.
 - Mezi dávkami čeká aspoň 15 sekund.
+- Dávky v chatu zůstávají, po hodině se nemažou.
 - Příkazy a boti se nepočítají.
 
 ## Oslava plné místnosti
@@ -80,7 +81,7 @@ Znovu slaví až poté, co místnost klesne na 8 nebo méně a uplynou 3 hodiny.
 
 - **Příkazy se mažou**, jakmile na ně bot odpoví. Týká se všeho, co začíná `!`, včetně překlepů a neznámých příkazů.
 - **Odpovědi na příkazy se mažou** po minutě, včetně vlastních odpovědí. Potvrzení `!clear` zmizí po 10 sekundách. Oznámení `!afk` zůstane do tvého návratu, nejvýš hodinu.
-- **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách a hláška při startu po minutě.
+- **Ostatní zprávy bota se mažou** po hodině: uvítání, rozloučení, oznámení rulety a podobně. Přivítání po AFK zmizí po 15 sekundách a hláška při startu po minutě. Dávky vláčku emotů zůstávají.
 - **`!clear`** umožní bouncerovi smazat vše, co má bot ještě v chatu.
 - **Dlouhé odpovědi** se dělí až na čtyři očíslované zprávy (`(1/3)`), protože Wavez odmítá zprávy delší než 255 znaků.
 

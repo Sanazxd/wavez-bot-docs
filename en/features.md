@@ -68,6 +68,7 @@ When 3 different people post the same emote (`:kong:` by default) within 2 minut
 
 - After that it counts again from zero.
 - It waits at least 15 seconds between bursts.
+- The bursts stay in chat; they are not deleted after an hour.
 - Commands and bots do not count.
 
 ## Crowd celebration
@@ -80,7 +81,7 @@ It does not celebrate again until the room has dropped to 8 or fewer and 3 hours
 
 - **Commands are deleted** once they have been answered. This covers anything starting with `!`, typos and unknown commands included.
 - **Replies to commands are deleted** after 1 minute, canned replies included. `!clear` confirmations go after 10 seconds. The `!afk` notice stays until you are back, at most an hour.
-- **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds, and the startup line after a minute.
+- **The bot's other messages are deleted** after an hour: welcomes, farewells, ruleta announcements and the like. The AFK welcome back goes after 15 seconds, and the startup line after a minute. Emote train bursts stay.
 - **`!clear`** lets a bouncer delete everything the bot still has in chat.
 - **Long replies** are split into up to four numbered messages (`(1/3)`), because Wavez rejects messages over 255 characters.
 

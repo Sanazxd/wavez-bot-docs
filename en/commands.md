@@ -31,12 +31,9 @@ An alias works exactly like the command name: `!np` is `!nowplaying`.
 | `!mods` | `staff` | Staff the bot has seen recently, grouped by role |
 | `!seen <user>` | `lastseen` | When someone last spoke and what they last played |
 | `!history [count]` | `last`, `recent` | The last few finished tracks, newest first, up to five |
-| `!dupe` | `again`, `heardit` | Whether the current track was among the last 20, and who played it |
-| `!top` | `best` | The best received of the last 20 tracks (woots minus mehs) |
-| `!rules` | `etiquette` | Where to find the room rules: a link to this documentation |
 | `!afk [reason]` | `away`, `brb` | Mark yourself away. See [AFK](features.md#afk) |
 | `!uptime` | | How long the bot has been running |
-| `!ping` | `pong` | Checks the bot is alive |
+| `!ping` | `pong` | Checks the bot is alive, with the round trip to the server in ms |
 
 ## Fun
 
@@ -71,7 +68,7 @@ No one can act on the bot, on someone with the same role, or on anyone above the
 | `!mute <user> [duration] [reason]` | | bouncer | Mute someone, optionally for `30m`, `2h` or `1d` |
 | `!unmute <user> [reason]` | | bouncer | Lift a mute |
 | `!remove <user> [reason]` | `rm` | bouncer | Take someone out of the queue |
-| `!move <user> <position> [reason]` | `mv` | bouncer | Move someone to a queue position (1 is first) |
+| `!move <user> <position> [reason]` | `mv` | bouncer | Move someone in the queue to a position (1 is first; past the end puts them last). Says so only once the server has done it |
 | `!lock [reason]` / `!unlock [reason]` | | bouncer | Lock or unlock the queue |
 | `!clear` | | bouncer | Delete the bot's own messages still in chat (from the last 100) |
 | `!ban <user> [duration] [reason]` | | manager | Ban someone, optionally for `30m`, `2h` or `1d` |

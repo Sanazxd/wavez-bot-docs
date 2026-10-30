@@ -6,10 +6,10 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 
 ## Compared with the original
 
-| | Original 1.1.0 | This fork 2.0.3 |
+| | Original 1.1.0 | This fork 2.0.4 |
 | --- | --- | --- |
 | Languages | English only | English and Czech, switched in chat with `!en` / `!cz` |
-| Commands | 40 | 42: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe` and `!theme`; `!rules` links to these docs |
+| Commands | 40 | 39: adds `!ruleta`/`!join`, `!clear`, `!en`, `!cz`; drops `!vibe`, `!theme`, `!rules`, `!dupe` and `!top` |
 | `!help` | every command in one list | categories with counts; `!help <category>` and `!help <command>`; only what you can use; links to these docs |
 | Role ladder | `user < resident_dj < bouncer < manager < cohost < host` | adds `vip` between `user` and `resident_dj` |
 | Platform titles | `admin` counts as manager, `ambassador` as bouncer | only `admin` counts as manager; ambassadors are whatever the room made them |
@@ -19,6 +19,23 @@ This bot is a fork of **[fluteds/wavez-bot](https://github.com/fluteds/wavez-bot
 | Room automation | none | auto-skip, emote train, crowd celebration at 10 people, ruleta raffle |
 | Chat cleanup | none | command messages deleted, replies deleted after a minute and other bot messages after an hour, `!clear` |
 | Reply style | plain lower-case text | one consistent style: leading emoji, ` · ` between items, bars and flags |
+
+## 2.0.4 — 2026-10-30
+
+### Changed
+
+- **`!ping` shows the round trip** to the server in milliseconds (`🏓 Pong · 42 ms`), or says the server did not answer.
+- **Emote train bursts stay in chat** instead of being deleted after an hour.
+
+### Removed
+
+- **`!rules`** (`!etiquette`). The bare `!help` still links to this documentation.
+- **`!dupe`** (`!again`, `!heardit`).
+- **`!top`** (`!best`).
+
+### Fixed
+
+- **`!move`** put people one spot lower than asked, and `!move <user> 1` did nothing. It now moves them to the spot typed, says so if they are not in the queue, and says it moved them only once the server has done it.
 
 ## 2.0.3 — 2026-10-30
 
